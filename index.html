@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialoga Trident Extension</title>
+  <meta name="description" content="Página de entrada de Trident, la centralita basada en WebRTC de Dialoga Group. Inicia sesión y descarga Trident y Musa para Android, iPhone, Windows y Mac.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#145273">
+  <link rel="icon" href="assets/ima/dialoga_favicon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+  <!-- ===== Cabecera ===== -->
+  <header class="cabecera">
+    <a class="marca" href="#inicio" aria-label="Trident, inicio">
+      <img src="assets/ima/logo-trident-extension.svg" alt="Dialoga Trident Extension" width="56" height="48">
+    </a>
+    <nav class="nav" aria-label="Secciones">
+      <a href="#acceso">Acceso</a>
+      <a href="#descargas">Descargas</a>
+      <a href="#musa">Musa</a>
+      <a href="#ayuda">Ayuda</a>
+    </nav>
+    <div class="cabecera-acciones">
+      <a class="btn btn-primario btn-pequeno" href="#acceso">Iniciar sesión</a>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <!-- ===== Portada con acceso =====
+         Los identificadores del formulario (div-login, userID, userPassword, user_language,
+         remindMe, login-button, google-button, microsoft-button, capsLockWarning) son los
+         mismos que usa trident.dialoga.io, para que el código de inicio de sesión existente
+         pueda engancharse sin cambios. -->
+    <section class="portada" id="acceso">
+      <div class="portada-interior">
+
+        <div class="portada-texto">
+          <div class="portada-logo-caja">
+            <img class="portada-logo" src="assets/ima/logo-trident-extension.svg" alt="Dialoga Trident Extension" width="102" height="88">
+          </div>
+          <h1 id="loginLabel1">La centralita basada en tecnología WebRTC</h1>
+          <p id="loginLabel2" class="portada-sub">En cualquier dispositivo · Enrutado de llamadas · IVR · Buzones de voz · Analítica</p>
+
+          <ul class="ventajas">
+            <li>Sin hardware ni infraestructura física: todo en la nube.</li>
+            <li>Voz, vídeo y chat desde el navegador, el escritorio o el móvil.</li>
+            <li>Acceso con tu cuenta de empresa de Google o Microsoft.</li>
+          </ul>
+
+          <div class="portada-descargas">
+            <span>Descarga rápida</span>
+            <div class="insignias" id="insignias-rapidas"></div>
+          </div>
+        </div>
+
+        <div id="div-login" class="acceso-tarjeta">
+          <div id="loginForm">
+            <div class="userPas">
+              <h2>Iniciar sesión</h2>
+              <p class="acceso-ayuda">Introduce tu identificador y tu contraseña de Trident.</p>
+
+              <div id="loginElementsContainer">
+                <label class="campo">
+                  <span>Identificador</span>
+                  <input type="text" id="userID" name="userID" placeholder="ID" autocomplete="username" autocapitalize="off" spellcheck="false">
+                </label>
+                <label class="campo">
+                  <span>Contraseña</span>
+                  <input type="password" id="userPassword" name="userPassword" placeholder="Contraseña" autocomplete="current-password">
+                </label>
+                <div id="capsLockWarning" class="aviso-mayusculas" hidden>Bloqueo de mayúsculas activado.</div>
+
+                <div class="fila-opciones">
+                  <div id="remindMeElement" class="recordar">
+                    <input type="checkbox" id="remindMe">
+                    <label id="remindMesLabel" for="remindMe">Recordarme</label>
+                  </div>
+                  <label class="idioma">
+                    <span class="visualmente-oculto">Idioma</span>
+                    <select id="user_language" aria-label="Idioma">
+                      <option value="es" selected>Español</option>
+                      <option value="en">English</option>
+                      <option value="fr">Français</option>
+                      <option value="it">Italiano</option>
+                      <option value="de">Deutsch</option>
+                      <option value="pt">Português</option>
+                    </select>
+                  </label>
+                </div>
+
+                <button id="login-button" class="btn btn-primario btn-bloque" type="button">Entrar</button>
+
+                <div id="loginSeparator" class="separador"><span id="centerSeparator">o</span></div>
+
+                <button id="google-button" class="btn btn-claro btn-bloque" type="button">
+                  <img id="imageGoogle" src="assets/ima/Google_G.svg" alt="" width="18" height="18">
+                  <span>Iniciar sesión con Google</span>
+                </button>
+                <button id="microsoft-button" class="btn btn-claro btn-bloque" type="button">
+                  <img id="imageMicrosoft" src="assets/ima/microsoft-logo.svg" alt="" width="18" height="18">
+                  <span>Iniciar sesión con Microsoft</span>
+                </button>
+              </div>
+
+              <p class="acceso-nota">¿No puedes entrar? <a id="enlace-soporte" href="#">Escribe a soporte</a>.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div id="whiteDialogaLogo" class="patrocinio">
+        <span id="textPowered">Powered by</span>
+        <a id="textPoweredLink" href="https://www.dialoga.io" target="_blank" rel="noopener">
+          <img id="imageWhiteDialoga" src="assets/ima/whiteDialoga.svg" alt="Dialoga" width="118" height="26">
+        </a>
+        <label class="version"></label>
+      </div>
+    </section>
+
+    <!-- ===== Descargas de Trident ===== -->
+    <section class="descargas" id="descargas">
+      <div class="seccion-cabecera">
+        <div>
+          <span class="etiqueta">Descargas</span>
+          <h2>Trident en todos tus dispositivos</h2>
+          <p>Las versiones publicadas en Google Play, App Store y para escritorio. Instala la aplicación en el dispositivo que uses a diario o entra desde el navegador sin instalar nada.</p>
+        </div>
+        <p class="actualizado">Catálogo revisado el <time id="fecha-catalogo"></time></p>
+      </div>
+      <div id="rejilla-trident" class="rejilla-paquetes"></div>
+    </section>
+
+    <!-- ===== Descargas de Musa ===== -->
+    <section class="descargas descargas-musa" id="musa">
+      <div class="seccion-cabecera">
+        <div>
+          <span class="etiqueta etiqueta-musa">Musa</span>
+          <h2>Musa, tu voz convertida en texto</h2>
+          <p>Dictado y transcripción en tiempo real en más de 15 idiomas, integrado como teclado del sistema en cualquier aplicación.</p>
+        </div>
+      </div>
+      <div id="rejilla-musa" class="rejilla-paquetes rejilla-dos"></div>
+      <p id="musa-movil" class="musa-movil"></p>
+    </section>
+
+    <!-- ===== Ayuda ===== -->
+    <section class="ayuda" id="ayuda">
+      <div class="ayuda-tarjeta">
+        <div>
+          <h2>¿Qué paquete necesito?</h2>
+          <ul>
+            <li><strong>Trabajas desde el navegador:</strong> no necesitas instalar nada, inicia sesión arriba.</li>
+            <li><strong>Usas Windows o Mac a diario:</strong> instala la aplicación de escritorio para recibir llamadas aunque el navegador esté cerrado.</li>
+            <li><strong>Atiendes desde el móvil:</strong> instala Trident desde Google Play o App Store para seguir disponible fuera de la oficina.</li>
+            <li><strong>Transcribes o dictas:</strong> Musa convierte tu voz en texto en cualquier aplicación.</li>
+          </ul>
+        </div>
+        <div class="ayuda-contacto">
+          <p>¿Dudas con la instalación?</p>
+          <a id="btn-soporte" class="btn btn-primario" href="#">Escribir a soporte</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <img src="assets/ima/logo_dialoga_color.svg" alt="Dialoga" width="111" height="24">
+    <p>© <span id="anio"></span> Dialoga Group. Trident y Musa son productos de Dialoga Group.</p>
+    <p class="pie-enlaces">
+      <a href="https://apps.apple.com/es/developer/dialoga-group-llc/id441721427" target="_blank" rel="noopener">Dialoga en App Store</a>
+      <span>·</span>
+      <a href="https://play.google.com/store/apps/developer?id=Dialoga+Group" target="_blank" rel="noopener">Dialoga en Google Play</a>
+    </p>
+  </footer>
+
+  <script src="paquetes.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
