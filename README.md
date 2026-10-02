@@ -1,34 +1,37 @@
-# Trident · página de entrada
+# Trident · entrada
 
-Rediseño de la página de entrada de Trident (https://trident.dialoga.io), de Dialoga Group. Es un sitio estático: no necesita compilación ni dependencias.
+Rediseño de la entrada de Trident (https://trident.dialoga.io), de Dialoga Group. Es un sitio estático de **una sola pantalla**: no necesita compilación ni dependencias.
 
-El formulario de acceso conserva los mismos identificadores que la página actual (`div-login`, `userID`, `userPassword`, `user_language`, `remindMe`, `login-button`, `google-button`, `microsoft-button`, `capsLockWarning`, `whiteDialogaLogo`), de modo que el código de inicio de sesión existente puede engancharse sin cambios.
+Reproduce la estructura de la entrada actual (logotipo y lemas arriba; descargas, acceso y Dialoga en una fila) con el mismo fondo (`bgLogin.jpg`), el recuadro de acceso oscuro con desenfoque, el botón verde y la transición desde el trident animado de carga.
 
-Contiene:
+El formulario de acceso conserva los identificadores de la página actual (`div-login`, `loginTridentLogo`, `loginLabel1`, `loginLabel2`, `userID`, `userPassword`, `user_language`, `remindMe`, `login-button`, `google-button`, `microsoft-button`, `capsLockWarning`, `buttonsDownload`, `whiteDialogaLogo`), de modo que el código de inicio de sesión existente puede engancharse sin cambios.
 
-- Acceso a la aplicación web de Trident (con cuenta de Google o con usuario y contraseña).
-- Tarjetas de descarga de los seis paquetes: Trident para Android, iPhone/iPad, Windows y Mac, y Musa para Windows y Mac.
-- Enlaces secundarios a Musa en Google Play y App Store.
+## Paquetes
+
+| Columna | Paquetes |
+| --- | --- |
+| Trident | Android (Google Play), iPhone y iPad (App Store), Windows (instalador), Mac (imagen de disco) |
+| Musa | Android (Google Play), iPhone y iPad (App Store), Windows (instalador), Mac (Mac App Store) |
 
 ## Estructura
 
 | Archivo | Función |
 | --- | --- |
-| `index.html` | Marcado de la página |
+| `index.html` | Marcado de la entrada |
 | `paquetes.js` | **Catálogo de paquetes**: versiones, fechas, requisitos y enlaces |
-| `assets/app.js` | Pinta las tarjetas a partir del catálogo y gestiona el tema claro/oscuro |
-| `assets/styles.css` | Estilos (tipografía Lato y colores del logotipo de Trident y de Dialoga) |
-| `assets/ima/` | Logotipos e insignias oficiales tomados de trident.dialoga.io |
+| `assets/app.js` | Pinta las filas de descarga, el aviso de mayúsculas y la transición de carga |
+| `assets/styles.css` | Estilos (tipografía Lato, fondo y colores de la entrada actual) |
+| `assets/ima/` | Fondo, animación de carga, logotipos e insignias oficiales tomados de trident.dialoga.io |
 
 ## Actualizar un paquete
 
-Edita `paquetes.js`. Cada entrada de `paquetes` tiene `version`, `fecha`, `requisitos` y `url`.
+Edita `paquetes.js`. Cada entrada de `paquetes` tiene `version`, `fecha`, `requisitos`, `tamano` (opcional), `url` y `aviso` (opcional).
 
-- Si `url` está vacío, la tarjeta aparece como **En preparación** y el botón queda desactivado.
-- Para publicar un instalador de escritorio (Electron), sube el archivo y pon su dirección en `url`, junto con `version`, `fecha` y, si quieres, `tamano`.
-- El campo `aviso` muestra una nota bajo el botón y marca la tarjeta como **En revisión** (por ejemplo, el paquete de Mac mientras se recompila).
-- El campo `actualizado` es la fecha en la que se revisó el catálogo y se muestra en la sección de descargas.
-- En `acceso` están las direcciones de la aplicación web y del soporte.
+- Si `url` está vacío, la fila aparece como **En preparación** y sin enlace.
+- Si `aviso` tiene texto, la fila se marca como **En revisión** y el texto se muestra al pasar el ratón.
+- Para publicar un instalador de escritorio (Electron), sube el archivo y pon su dirección en `url`, junto con `version`, `fecha` y `tamano`.
+- El campo `actualizado` es la fecha en la que se revisó el catálogo.
+- En `acceso.urlSoporte` está la dirección de soporte.
 
 ## Probar en local
 

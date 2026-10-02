@@ -76,6 +76,28 @@ window.TRIDENT_PAQUETES = {
       aviso: "Versión en revisión: se publicará una compilación nueva en breve."
     },
     {
+      id: "musa-android",
+      producto: "musa",
+      plataforma: "android",
+      nombre: "Musa para Android",
+      tienda: "Google Play",
+      version: "1.0.4",
+      fecha: "14 jul 2026",
+      requisitos: "Android · teclado de voz",
+      url: "https://play.google.com/store/apps/details?id=com.dialoga.transcribe"
+    },
+    {
+      id: "musa-ios",
+      producto: "musa",
+      plataforma: "ios",
+      nombre: "Musa para iPhone y iPad",
+      tienda: "App Store",
+      version: "1.0",
+      fecha: "20 jul 2026",
+      requisitos: "iOS 16.0 o posterior (MusaFlow)",
+      url: "https://apps.apple.com/es/app/musaflow/id6768950151"
+    },
+    {
       id: "musa-windows",
       producto: "musa",
       plataforma: "windows",
@@ -96,24 +118,6 @@ window.TRIDENT_PAQUETES = {
       version: "1.0",
       fecha: "20 jul 2026",
       requisitos: "macOS 13.0 o posterior · chip Apple M1 o posterior",
-      url: "https://apps.apple.com/es/app/musaflow/id6768950151"
-    }
-  ],
-
-  // Enlaces secundarios de Musa en el móvil (se muestran bajo las tarjetas de Musa).
-  musaMovil: [
-    {
-      plataforma: "android",
-      etiqueta: "Musa en Google Play",
-      version: "1.0.4",
-      fecha: "14 jul 2026",
-      url: "https://play.google.com/store/apps/details?id=com.dialoga.transcribe"
-    },
-    {
-      plataforma: "ios",
-      etiqueta: "MusaFlow en App Store",
-      version: "1.0",
-      fecha: "20 jul 2026",
       url: "https://apps.apple.com/es/app/musaflow/id6768950151"
     }
   ]
