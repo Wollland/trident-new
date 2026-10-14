@@ -20,7 +20,7 @@
  */
 window.TRIDENT_PAQUETES = {
   // Fecha en la que se revisó por última vez este catálogo.
-  actualizado: "2 oct 2026",
+  actualizado: "14 Oct 2026",
 
   acceso: {
     // Dirección de soporte.
@@ -32,33 +32,33 @@ window.TRIDENT_PAQUETES = {
       id: "trident-android",
       producto: "trident",
       plataforma: "android",
-      nombre: "Trident para Android",
+      nombre: "Trident for Android",
       tienda: "Google Play",
       version: "3.4.7",
-      fecha: "1 sept 2026",
-      requisitos: "Android · teléfono y tableta",
+      fecha: "1 Sep 2026",
+      requisitos: "Android · phone and tablet",
       url: "https://play.google.com/store/apps/details?id=apps.dialoga.com.trident"
     },
     {
       id: "trident-ios",
       producto: "trident",
       plataforma: "ios",
-      nombre: "Trident para iPhone y iPad",
+      nombre: "Trident for iPhone and iPad",
       tienda: "App Store",
       version: "2.10.51",
-      fecha: "21 sept 2026",
-      requisitos: "iOS 15.0 o posterior",
+      fecha: "21 Sep 2026",
+      requisitos: "iOS 15.0 or later",
       url: "https://apps.apple.com/es/app/dialoga-trident-extension/id1132542985"
     },
     {
       id: "trident-windows",
       producto: "trident",
       plataforma: "windows",
-      nombre: "Trident para Windows",
-      tienda: "Descarga directa",
+      nombre: "Trident for Windows",
+      tienda: "Direct download",
       version: "4.0.0",
-      fecha: "5 may 2026",
-      requisitos: "Windows · instalador (.exe)",
+      fecha: "5 May 2026",
+      requisitos: "Windows · installer (.exe)",
       tamano: "137 MB",
       url: "https://dialoga-download.s3.amazonaws.com/trident/win32/TridentUserSetup.exe"
     },
@@ -66,46 +66,46 @@ window.TRIDENT_PAQUETES = {
       id: "trident-macos",
       producto: "trident",
       plataforma: "macos",
-      nombre: "Trident para Mac",
-      tienda: "Descarga directa",
+      nombre: "Trident for Mac",
+      tienda: "Direct download",
       version: "",
-      fecha: "13 nov 2023",
-      requisitos: "macOS · imagen de disco (.dmg)",
+      fecha: "13 Nov 2023",
+      requisitos: "macOS · disk image (.dmg)",
       tamano: "136 MB",
       url: "https://dialoga-download.s3.amazonaws.com/trident/mac/TridentUser.dmg",
-      aviso: "Versión en revisión: se publicará una compilación nueva en breve."
+      aviso: "Build under review: a new version will be published shortly."
     },
     {
       id: "musa-android",
       producto: "musa",
       plataforma: "android",
-      nombre: "Musa para Android",
+      nombre: "Musa for Android",
       tienda: "Google Play",
       version: "1.0.4",
-      fecha: "14 jul 2026",
-      requisitos: "Android · teclado de voz",
+      fecha: "14 Jul 2026",
+      requisitos: "Android · voice keyboard",
       url: "https://play.google.com/store/apps/details?id=com.dialoga.transcribe"
     },
     {
       id: "musa-ios",
       producto: "musa",
       plataforma: "ios",
-      nombre: "Musa para iPhone y iPad",
+      nombre: "Musa for iPhone and iPad",
       tienda: "App Store",
       version: "1.0",
-      fecha: "20 jul 2026",
-      requisitos: "iOS 16.0 o posterior (MusaFlow)",
+      fecha: "20 Jul 2026",
+      requisitos: "iOS 16.0 or later (MusaFlow)",
       url: "https://apps.apple.com/es/app/musaflow/id6768950151"
     },
     {
       id: "musa-windows",
       producto: "musa",
       plataforma: "windows",
-      nombre: "Musa para Windows",
-      tienda: "Descarga directa",
+      nombre: "Musa for Windows",
+      tienda: "Direct download",
       version: "",
       fecha: "",
-      requisitos: "Windows · instalador (.exe)",
+      requisitos: "Windows · installer (.exe)",
       tamano: "",
       url: ""
     },
@@ -113,11 +113,11 @@ window.TRIDENT_PAQUETES = {
       id: "musa-macos",
       producto: "musa",
       plataforma: "macos",
-      nombre: "Musa para Mac",
+      nombre: "Musa for Mac",
       tienda: "Mac App Store",
       version: "1.0",
-      fecha: "20 jul 2026",
-      requisitos: "macOS 13.0 o posterior · chip Apple M1 o posterior",
+      fecha: "20 Jul 2026",
+      requisitos: "macOS 13.0 or later · Apple M1 chip or later",
       url: "https://apps.apple.com/es/app/musaflow/id6768950151"
     }
   ]

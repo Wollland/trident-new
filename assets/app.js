@@ -14,11 +14,11 @@
 
   // Insignias oficiales (las mismas que usa trident.dialoga.io)
   var INSIGNIAS = {
-    'Google Play': { src: 'assets/ima/google-play.svg', alt: 'Disponible en Google Play' },
-    'App Store': { src: 'assets/ima/app-store.svg', alt: 'Descargar en App Store' },
-    'Mac App Store': { src: 'assets/ima/app-store.svg', alt: 'Descargar en Mac App Store' },
-    windows: { src: 'assets/ima/windows.svg', alt: 'Descargar para Windows' },
-    macos: { src: 'assets/ima/mac.svg', alt: 'Descargar para Mac' }
+    'Google Play': { src: 'assets/ima/google-play.svg', alt: 'Get it on Google Play' },
+    'App Store': { src: 'assets/ima/app-store.svg', alt: 'Download on the App Store' },
+    'Mac App Store': { src: 'assets/ima/app-store.svg', alt: 'Download on the Mac App Store' },
+    windows: { src: 'assets/ima/windows.svg', alt: 'Download for Windows' },
+    macos: { src: 'assets/ima/mac.svg', alt: 'Download for Mac' }
   };
 
   function escapar(texto) {
@@ -41,17 +41,17 @@
     var texto = detalle.join(' · ');
 
     var estado = '';
-    if (!disponible) estado = '<span class="paquete-estado pendiente">En preparación</span>';
-    else if (p.aviso) estado = '<span class="paquete-estado revision" title="' + escapar(p.aviso) + '">En revisión</span>';
+    if (!disponible) estado = '<span class="paquete-estado pendiente">Coming soon</span>';
+    else if (p.aviso) estado = '<span class="paquete-estado revision" title="' + escapar(p.aviso) + '">Under review</span>';
 
     var accion;
     if (disponible && insignia) {
       accion = '<a class="insignia" href="' + escapar(p.url) + '" target="_blank" rel="noopener" aria-label="' + escapar(insignia.alt + ': ' + p.nombre) + '">' +
                '<img src="' + insignia.src + '" alt="' + escapar(insignia.alt) + '" width="221" height="58"></a>';
     } else if (disponible) {
-      accion = '<a class="insignia" href="' + escapar(p.url) + '" target="_blank" rel="noopener">Descargar</a>';
+      accion = '<a class="insignia" href="' + escapar(p.url) + '" target="_blank" rel="noopener">Download</a>';
     } else {
-      accion = '<span class="pendiente-btn">Próximamente</span>';
+      accion = '<span class="pendiente-btn">Coming soon</span>';
     }
 
     var titulo = p.requisitos ? ' title="' + escapar(p.requisitos + (p.aviso ? '. ' + p.aviso : '')) + '"' : '';

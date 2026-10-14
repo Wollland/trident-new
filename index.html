@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dialoga Trident Extension</title>
-  <meta name="description" content="Entrada de Trident, la centralita basada en WebRTC de Dialoga Group. Inicia sesión y descarga Trident y Musa para Android, iPhone, Windows y Mac.">
+  <meta name="description" content="Trident login page, the WebRTC-based PBX by Dialoga Group. Sign in and download Trident and Musa for Android, iPhone, Windows and Mac.">
   <meta name="theme-color" content="#7a1f26">
   <link rel="icon" href="assets/ima/dialoga_favicon.png" type="image/png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -31,8 +31,8 @@
         <img id="mainTridentLogo" src="assets/ima/logo-trident-extension.svg" alt="Dialoga Trident Extension" width="112" height="97">
       </div>
       <div id="loginLabels">
-        <div id="loginLabel1">La centralita basada en tecnología WebRTC</div>
-        <div id="loginLabel2">En cualquier dispositivo · Enrutado de llamadas · IVR · Buzones de voz · Analítica</div>
+        <div id="loginLabel1">The PBX based on WebRTC Technology</div>
+        <div id="loginLabel2">On any device · Call routing · IVR · Voicemails · Analytics</div>
       </div>
     </header>
 
@@ -41,8 +41,8 @@
       <!-- Columna izquierda: paquetes de Trident -->
       <aside class="columna columna-trident" aria-labelledby="titulo-trident">
         <div id="buttonsDownload">
-          <h2 id="titulo-trident" class="columna-titulo">Descarga Trident</h2>
-          <p class="columna-sub">Versiones publicadas · catálogo revisado el <time id="fecha-catalogo"></time></p>
+          <h2 id="titulo-trident" class="columna-titulo">Download Trident</h2>
+          <p class="columna-sub">Published versions · catalogue checked on <time id="fecha-catalogo"></time></p>
           <div id="lista-trident" class="lista-paquetes"></div>
         </div>
       </aside>
@@ -52,20 +52,20 @@
         <div class="userPas">
           <div id="blurDiv" aria-hidden="true"></div>
           <div id="loginElementsContainer">
-            <h2 class="acceso-titulo">Iniciar sesión</h2>
+            <h2 class="acceso-titulo">Sign in</h2>
 
-            <input type="text" id="userID" name="userID" placeholder="ID" autocomplete="username" autocapitalize="off" spellcheck="false" aria-label="Identificador">
-            <input type="password" id="userPassword" name="userPassword" placeholder="Contraseña" autocomplete="current-password" aria-label="Contraseña">
-            <div id="capsLockWarning" hidden>Bloqueo de mayúsculas activado.</div>
+            <input type="text" id="userID" name="userID" placeholder="ID" autocomplete="username" autocapitalize="off" spellcheck="false" aria-label="ID">
+            <input type="password" id="userPassword" name="userPassword" placeholder="Password" autocomplete="current-password" aria-label="Password">
+            <div id="capsLockWarning" hidden>Caps Lock is on.</div>
 
             <div class="fila-opciones">
               <div id="remindMeElement">
                 <input type="checkbox" id="remindMe">
-                <label id="remindMesLabel" for="remindMe">Recordarme</label>
+                <label id="remindMesLabel" for="remindMe">Remember me</label>
               </div>
-              <select id="user_language" aria-label="Idioma">
-                <option value="es" selected>Español</option>
-                <option value="en">English</option>
+              <select id="user_language" aria-label="Language">
+                <option value="en" selected>English</option>
+                <option value="es">Español</option>
                 <option value="fr">Français</option>
                 <option value="it">Italiano</option>
                 <option value="de">Deutsch</option>
@@ -73,24 +73,24 @@
               </select>
             </div>
 
-            <button id="login-button" type="button">Entrar</button>
+            <button id="login-button" type="button">Ok</button>
 
             <div id="loginSeparator">
               <span id="leftSeparatorSpan"><div id="leftSeparator"></div></span>
-              <span id="centerSeparator">o</span>
+              <span id="centerSeparator">or</span>
               <span id="rightSeparatorSpan"><div id="rightSeparator"></div></span>
             </div>
 
             <button id="google-button" type="button">
               <img id="imageGoogle" src="assets/ima/Google_G.svg" alt="" width="18" height="18">
-              <span>Iniciar sesión con Google</span>
+              <span>Sign in with Google</span>
             </button>
             <button id="microsoft-button" type="button">
               <img id="imageMicrosoft" src="assets/ima/microsoft-logo.svg" alt="" width="18" height="18">
-              <span>Iniciar sesión con Microsoft</span>
+              <span>Sign in with Microsoft</span>
             </button>
 
-            <p class="acceso-nota">¿No puedes entrar? <a id="enlace-soporte" href="#">Escribe a soporte</a></p>
+            <p class="acceso-nota">Trouble signing in? <a id="enlace-soporte" href="#">Contact support</a></p>
           </div>
         </div>
       </div>
@@ -98,8 +98,8 @@
       <!-- Columna derecha: paquetes de Musa y Dialoga -->
       <aside class="columna columna-musa" aria-labelledby="titulo-musa">
         <div>
-          <h2 id="titulo-musa" class="columna-titulo">Descarga Musa</h2>
-          <p class="columna-sub">Tu voz convertida en texto, en más de 15 idiomas</p>
+          <h2 id="titulo-musa" class="columna-titulo">Download Musa</h2>
+          <p class="columna-sub">Your voice turned into text, in more than 15 languages</p>
           <div id="lista-musa" class="lista-paquetes"></div>
         </div>
 
