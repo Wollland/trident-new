@@ -72,8 +72,7 @@ window.TRIDENT_PAQUETES = {
       fecha: "13 Nov 2023",
       requisitos: "macOS · disk image (.dmg)",
       tamano: "136 MB",
-      url: "https://dialoga-download.s3.amazonaws.com/trident/mac/TridentUser.dmg",
-      aviso: "Build under review: a new version will be published shortly."
+      url: "https://dialoga-download.s3.amazonaws.com/trident/mac/TridentUser.dmg"
     },
     {
       id: "musa-android",
